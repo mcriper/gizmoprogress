@@ -4,7 +4,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-		document.write("<p> Brandon Baldwin Vlogs </p>")
+		document.write("<p> <a href='https://www.youtube.com/channel/UC6j9nvN6AKYEZM7OpUE9e4A'> Brandon Baldwin Vlogs </p>")
        	document.write("<p id='bbv'>" + myObj.items[0].statistics.subscriberCount)
     }
 };
@@ -16,7 +16,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-       	document.write("<p>GizmoSlipTech ")
+       	document.write("<p> <a href='https://www.youtube.com/channel/UC7u5APUApfF8MzbGHPJXF7w'> GizmoSlipTech ")
 		document.write("<p id='gste'>" + myObj.items[0].statistics.subscriberCount)
 		
     }
@@ -29,7 +29,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-       document.write("<p> GizmoSlipTV")	
+       document.write("<p> <a href='https://www.youtube.com/user/QuadronTV'> GizmoSlipTV")	
 	   document.write("<p id='gtv'>" + myObj.items[0].statistics.subscriberCount)
 		
     }
@@ -42,7 +42,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-       	document.write("<p> GizmoSlip Main")
+       	document.write("<p>  <a href='https://www.youtube.com/user/GizmoSlip'> GizmoSlip Main")
 		document.write("<p id='gsm'>" + myObj.items[0].statistics.subscriberCount)
 		
     }
