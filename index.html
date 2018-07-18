@@ -1,0 +1,94 @@
+<script>
+function bbvlogs() {
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+		document.write("<p> <a href='https://www.youtube.com/channel/UC6j9nvN6AKYEZM7OpUE9e4A'> Brandon Baldwin Vlogs </a>")
+       	document.write("<p id='bbv'>" + myObj.items[0].statistics.subscriberCount)
+    }
+};
+xmlhttp.open("GET", "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC6j9nvN6AKYEZM7OpUE9e4A&key=AIzaSyAyWsBUsAChiYPDOptU-NBAh_p7oExR1oc&fields=items/statistics/subscriberCount", true);
+xmlhttp.send();
+}
+function gstech() {
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+       	document.write("<p> <a href='https://www.youtube.com/channel/UC7u5APUApfF8MzbGHPJXF7w'> GizmoSlipTech </a>")
+		document.write("<p id='gste'>" + myObj.items[0].statistics.subscriberCount)
+		
+    }
+};
+xmlhttp.open("GET", "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC7u5APUApfF8MzbGHPJXF7w&key=AIzaSyAyWsBUsAChiYPDOptU-NBAh_p7oExR1oc&fields=items/statistics/subscriberCount", true);
+xmlhttp.send();
+}
+function gstv() {
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+       document.write("<p> <a href='https://www.youtube.com/user/QuadronTV'> GizmoSlipTV </a>")	
+	   document.write("<p id='gtv'>" + myObj.items[0].statistics.subscriberCount)
+		
+    }
+};
+xmlhttp.open("GET", "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC3yY6ynq1AZ8qGhI21DEa-Q&key=AIzaSyAyWsBUsAChiYPDOptU-NBAh_p7oExR1oc&fields=items/statistics/subscriberCount", true);
+xmlhttp.send();
+}
+function gsmain() {
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+       	document.write("<p>  <a href='https://www.youtube.com/user/GizmoSlip'> GizmoSlip Main </a>")
+		document.write("<p id='gsm'>" + myObj.items[0].statistics.subscriberCount)
+		
+    }
+};
+xmlhttp.open("GET", "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCmY5lv5l2RYGOKWKGXLmGJw&key=AIzaSyAyWsBUsAChiYPDOptU-NBAh_p7oExR1oc&fields=items/statistics/subscriberCount", true);
+xmlhttp.send();
+}
+bbvlogs();
+gstech();
+gstv();
+gsmain();
+setTimeout( function() {
+function oof() {
+var bbvlogsc = document.getElementById("bbv").innerHTML
+var gstechc = document.getElementById("gste").innerHTML
+var gstvc = document.getElementById("gtv").innerHTML
+var gsmainc = document.getElementById("gsm").innerHTML
+var combinedcount = Number(bbvlogsc) + Number(gstechc) + Number(gstvc) + Number(gsmainc)
+return combinedcount
+}
+document.write("<p> -------------------------")
+	function Comma(Num) { //function to add commas to textboxes
+        Num += '';
+        Num = Num.replace(',', ''); Num = Num.replace(',', ''); Num = Num.replace(',', '');
+        Num = Num.replace(',', ''); Num = Num.replace(',', ''); Num = Num.replace(',', '');
+        x = Num.split('.');
+        x1 = x[0];
+        x2 = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1))
+            x1 = x1.replace(rgx, '$1' + ',' + '$2');
+        return x1 + x2;
+    }
+document.write("<p> Combined (4,000,000 for the giveaway to end):<b> " + Comma(oof()) + "</b>")
+var amountil = 4000000 - oof()
+document.write("<p>" + Comma(amountil) + " Subscriptions until giveaway end!")
+document.write('<p> <button onClick="location.reload()"> Refresh </button>')
+
+document.write(`<style>
+.cred {	
+	position: absolute;
+    bottom: 10px;
+    width: 50%;
+}
+</style><div class="cred" position="bottom"> <div> Created by JPBBerry (Admin on <a href="https://discord.gg/53rjK3m"> gizmo's discord </a>) <p> Check out his <a href="https://www.jt3ch.net">website</a></div>`)
+}, 1000);
+
+
+</script>
